@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Rockville-test/next-frontend/src/app/%28main%29/settings/page.js"],"sourcesContent":["// src/app/settings/page.js\r\n\"use client\";\r\n\r\nimport React from \"react\";\r\n\r\nexport default function SettingsPage() {\r\n  return (\r\n    <div>\r\n      <h2 className=\"text-2xl font-bold mb-4\">Settings</h2>\r\n      <p>Manage your account settings here.</p>\r\n      {/* Add more settings options as needed */}\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":"AAAA,2BAA2B;;;;;;AAG3B;AAFA;;;AAIe,SAAS;IACtB,qBACE,6LAAC;;0BACC,6LAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,6LAAC;0BAAE;;;;;;;;;;;;AAIT;KARwB","debugId":null}}]
+}
