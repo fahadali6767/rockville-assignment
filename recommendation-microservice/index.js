@@ -24,9 +24,7 @@ async function fetchFromNestAPI(endpoint, token) {
   }
 }
 app.post("/recommendations", async (req, res) => {
-  console.log(req.body);
   const { token, favoriteCategories } = req.body;
-  console.log(token, favoriteCategories);
   try {
     const moviesData = await fetchFromNestAPI("/movies", token);
     let filteredMovies = moviesData.filter((row) => {
