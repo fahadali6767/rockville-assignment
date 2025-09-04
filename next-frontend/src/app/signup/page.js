@@ -28,10 +28,8 @@ export default function SignupPage() {
         throw new Error(errorData.message || "Signup failed");
       }
 
-      const data = await response.json();
-      localStorage.setItem("token", data.token); // Store token in local storage
       alert("Signup successful!");
-      router.push("/"); // Redirect to a protected dashboard page
+      router.push("/login"); // Redirect to a protected dashboard page
     } catch (error) {
       alert(error.message);
     }
