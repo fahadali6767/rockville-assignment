@@ -55,9 +55,7 @@ export default function RootLayout({ children }) {
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Navbar */}
         <header className="flex justify-between items-center p-4 bg-white border-b border-gray-200">
-          <h1 className="text-xl font-semibold">
-            Welcome to your Dashboard333
-          </h1>
+          <h1 className="text-xl font-semibold">Welcome to your Dashboard</h1>
           <div>
             <button
               onClick={() => {
