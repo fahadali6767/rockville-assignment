@@ -43,9 +43,9 @@ class UpdateProfileDto {
 }
 exports.UpdateProfileDto = UpdateProfileDto;
 exports.updateProfileSchema = Joi.object({
-    dateOfBirth: Joi.string().optional(),
-    address: Joi.string().optional().max(255),
-    name: Joi.string().optional().max(100),
-    profileImage: Joi.string().optional().uri().max(500),
+    dateOfBirth: Joi.string().optional().allow(''),
+    address: Joi.string().optional().max(255).allow(''),
+    name: Joi.string().optional().max(100).allow(''),
+    profileImage: Joi.string().optional().uri().max(500).allow(''),
 }).min(1);
 //# sourceMappingURL=user.dto.js.map
