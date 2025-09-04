@@ -1,6 +1,8 @@
 # compiled output
 /dist
-/node_modules
+/nest-backend/node_modules
+/next-frontend/node_modules
+/recommendation-microservice/node_modules
 /build
 
 # Logs

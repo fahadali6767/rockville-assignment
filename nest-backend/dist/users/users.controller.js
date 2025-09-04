@@ -16,6 +16,8 @@ exports.UsersController = void 0;
 const common_1 = require("@nestjs/common");
 const auth_guard_guard_1 = require("../common/auth-guard/auth-guard.guard");
 const users_service_1 = require("./users.service");
+const validation_pipe_1 = require("../common/pipes/validation-pipe");
+const user_dto_1 = require("./user.dto");
 let UsersController = class UsersController {
     userService;
     constructor(userService) {
@@ -52,10 +54,11 @@ exports.UsersController = UsersController;
 __decorate([
     (0, common_1.Put)(),
     (0, common_1.UseGuards)(auth_guard_guard_1.AuthGuard),
+    (0, common_1.UsePipes)(new validation_pipe_1.JoiValidationPipe(user_dto_1.updateProfileSchema)),
     __param(0, (0, common_1.Body)()),
     __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Request]),
+    __metadata("design:paramtypes", [user_dto_1.UpdateProfileDto, Request]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "updateProfile", null);
 __decorate([

@@ -1,8 +1,6 @@
 import { Controller, Post, Get, Delete, Param, UseInterceptors, UploadedFile, UploadedFiles, Res, HttpStatus, UseGuards } from '@nestjs/common';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { MediaService } from './media.service';
-import { createReadStream } from 'fs';
-import { join } from 'path';
 import { AuthGuard } from 'src/common/auth-guard/auth-guard.guard';
 
 @Controller('media')

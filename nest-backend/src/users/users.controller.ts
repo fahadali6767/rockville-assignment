@@ -1,6 +1,8 @@
-import { Body, Controller, Get, Param, Put, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Param, Put, Req, UseGuards, UsePipes } from '@nestjs/common';
 import { AuthGuard } from 'src/common/auth-guard/auth-guard.guard';
 import { UsersService } from './users.service';
+import { JoiValidationPipe } from 'src/common/pipes/validation-pipe';
+import { UpdateProfileDto, updateProfileSchema } from './user.dto';
 
 @Controller('user')
 export class UsersController {
@@ -8,7 +10,8 @@ export class UsersController {
 
   @Put()
   @UseGuards(AuthGuard)
-  async updateProfile(@Body() body, @Req() req: Request) {
+  @UsePipes(new JoiValidationPipe(updateProfileSchema))
+  async updateProfile(@Body() body:UpdateProfileDto, @Req() req: Request) {
     let user = (req as any).user;
     const bodyData: any = {
       dateOfBirth: body?.dateOfBirth,

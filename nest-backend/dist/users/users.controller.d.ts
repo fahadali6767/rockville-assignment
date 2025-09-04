@@ -1,8 +1,9 @@
 import { UsersService } from './users.service';
+import { UpdateProfileDto } from './user.dto';
 export declare class UsersController {
     private userService;
     constructor(userService: UsersService);
-    updateProfile(body: any, req: Request): Promise<{
+    updateProfile(body: UpdateProfileDto, req: Request): Promise<{
         updatedData: import("../database/user/user.modal").User | null;
         message: string;
     }>;
